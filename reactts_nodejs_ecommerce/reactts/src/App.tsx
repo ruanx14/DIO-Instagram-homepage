@@ -1,8 +1,12 @@
-import Header from './components/Header';
+import GlobalStyle from './components/GlobalStyles';
+import { Router } from './Router';
 
 function App() {
   return (
-      <Header />
+    <>
+      <GlobalStyle />
+      <Router />
+    </>
   )
 }
 
