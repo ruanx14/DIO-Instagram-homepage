@@ -3,7 +3,6 @@ import { Link } from "react-router-dom";
 import {Envelope, Phone, MapPin} from "phosphor-react";
 
 const DivInfo = styled.div`
-    padding: 10px;
     width: 100%;
     background-color: rgba(51, 51, 51, 1);
     display: flex;
@@ -11,6 +10,12 @@ const DivInfo = styled.div`
     gap: 25px;
     border-top: 3px solid rgba(225, 15, 30, 1);
     height: 300px;
+    font-size: 1rem;
+    @media screen and (max-width: 700px) {
+        font-size: 0.7em;
+        gap: 15px;
+        padding: 5px;
+    }
 `
 const SectionBody = styled.section`
     max-height: 80%;
@@ -24,6 +29,7 @@ const SectionBody = styled.section`
             margin: 0;
         }
     }
+    
 `
 const LinkStyled = styled(Link)`
     &:hover{
@@ -37,6 +43,11 @@ const DivLast = styled.div`
     background-color: rgba(27, 27, 30, 1);
     display: flex; justify-content: center; align-items:center;
     color: white;
+    @media screen and (max-width: 700px) {
+        font-size: 0.7em;
+        gap: 15px;
+        padding: 5px;
+    }
 `
 //rgba(62, 69, 82, 1)
 function Footer() {
