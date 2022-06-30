@@ -6,15 +6,15 @@ const DivInfo = styled.div`
     width: 100%;
     background-color: rgba(51, 51, 51, 1);
     display: flex;
+    flex-wrap: wrap;
     justify-content: center;
     gap: 25px;
     border-top: 3px solid rgba(225, 15, 30, 1);
-    height: 300px;
+    min-height: 300px;
     font-size: 1rem;
-    @media screen and (max-width: 700px) {
-        font-size: 0.7em;
+    @media screen and (max-width: 1080px) {
+        font-size: 0.8em;
         gap: 15px;
-        padding: 5px;
     }
 `
 const SectionBody = styled.section`
@@ -24,6 +24,7 @@ const SectionBody = styled.section`
     gap: 20px;
     color: rgba(197, 197, 200, 1);
     flex-direction: column;
+    padding-bottom: 15px;
     &:nth-child(1){
         p{
             margin: 0;
@@ -43,10 +44,9 @@ const DivLast = styled.div`
     background-color: rgba(27, 27, 30, 1);
     display: flex; justify-content: center; align-items:center;
     color: white;
-    @media screen and (max-width: 700px) {
-        font-size: 0.7em;
+    @media screen and (max-width: 1080px) {
+        font-size: 0.8em;
         gap: 15px;
-        padding: 5px;
     }
 `
 //rgba(62, 69, 82, 1)

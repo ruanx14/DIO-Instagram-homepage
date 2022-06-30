@@ -7,7 +7,7 @@ const DivInfo = styled.div`
     height: 4vh;
     background-color: rgba(7, 8, 23, 1);
     width: 100%;
-    @media screen and (max-width:700px){
+    @media screen and (max-width:1080px){
         display: none;
     }
 `;
@@ -36,11 +36,13 @@ const DivSearch = styled.div`
     display: flex;
     img{
         align-self: center;
+        max-width: 100%;
+        height: auto;
     }
     #svgCart{
         align-self: center;
     }
-    @media screen and (max-width:700px){
+    @media screen and (max-width:1080px){
         img{
             display: none;
         }
@@ -60,13 +62,17 @@ const DivInfoContent = styled.div`
         //12vh
         height: 10vh;
     }
+    @media screen and (max-width:1080px){
+        width: 100%;
+    }
 `;
 const FormSearch = styled.form`
     align-self: center;
+    width: calc(100%/3);;
     input{
         padding: 10px;
         margin-right: 5px;
-        width: 400px;
+        width: calc(100%/2);
     }
     button{
         border: 1px solid #b63a3a; ;
@@ -81,10 +87,10 @@ const FormSearch = styled.form`
         cursor: pointer;
         background-color: #b63a3a; 
     }
-    @media screen and (max-width:700px){
-        input{
-            width: 200px;
-        }
+    @media screen and (max-width:1080px){
+        display:flex;
+        justify-content: center;
+        width: 100%;
     }
 `;
 
@@ -98,7 +104,7 @@ const Nav = styled.nav`
     #menuButton{
         display: none;
     }
-    @media screen and (max-width:700px){
+    @media screen and (max-width:1080px){
         #menuButton{
             display: block;
         }
@@ -111,18 +117,18 @@ const NavUl = styled.ul`
     width: 70%;
     margin: 0 auto;
     transition: transform 0.3s ease-in-out;
-    @media screen and (max-width:700px){
+    @media screen and (max-width:1080px){
         flex-direction: column;
         position: absolute;
         margin-top: 5vh;
-        margin-left: -5vh;
+        margin-left: -40px;
         width: 100%;
         transform: ${({ open }) => open ? 'translateX(0)' : 'translateX(-100%)'};
         border-bottom: 1px solid black;
     }
 `;
 const NavLi = styled.li`
-    width: 150px;
+    width: 100%;
     display: flex;
     flex-direction:column;
     justify-content: center;
@@ -143,7 +149,7 @@ const NavLi = styled.li`
     &:hover::after{
         width: 70%;
     }
-    @media screen and (max-width:700px){
+    @media screen and (max-width:1080px){
         width: 100%;
         height: 48px;
         &:nth-child(odd){
@@ -161,7 +167,7 @@ const Clickable = styled.div`
     height: 100%;
     z-index: 1;
     display: none;
-    @media screen and (max-width:700px){
+    @media screen and (max-width:1080px){
         //?
     }
 `
@@ -196,6 +202,7 @@ function Header() {
         }
 
     }
+    const login = false;
   return (
      <header>
         <DivInfo>
@@ -245,9 +252,15 @@ function Header() {
                 <NavLi><LinkStyled to="/">Inicio</LinkStyled></NavLi>
                 <NavLi><LinkStyled to="/products">Produtos</LinkStyled></NavLi>
                 <NavLi><LinkStyled to="/cart">Carrinho</LinkStyled></NavLi>
-                <NavLi><LinkStyled onClick={() => {
+                {
+                    login ? 
+                    <NavLi><LinkStyled to="/account">Conta</LinkStyled></NavLi>
+                    :
+                    <NavLi><LinkStyled to="/login">Logar/Cadastrar</LinkStyled></NavLi>
+                }
+                <NavLi><a onClick={() => {
                     setOpen(false);
-                }}to="#footerInfo">Sobre</LinkStyled></NavLi>
+                }} href="#footerInfo">Sobre</a></NavLi>
             </NavUl>
         </Nav>
         <Clickable id="clickable"></Clickable>

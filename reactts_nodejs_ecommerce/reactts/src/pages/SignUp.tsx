@@ -1,3 +1,4 @@
+
 import Footer from "../components/Footer";
 import styled from "styled-components";
 import { Link } from "react-router-dom";
@@ -68,18 +69,18 @@ const SectionBody = styled.section`
         height: 95%;
     }
 `;
-export default function Login(){
+export default function SignUp(){
     return (
         <>
         <DivBody>
             <SectionBody>
-                <h4>Login</h4>
+                <h4>Cadastro</h4>
                 <img src="./src/assets/default_logo.png" alt="logo"></img>
                 <form>
                     <input placeholder="Email" />
                     <input type="password" placeholder="Password" />
-                    <Link to="/signup">Cadastre-se</Link>
-                    <button type="submit">Login</button>
+                    <Link to="/login">Login</Link>
+                    <button type="submit">Cadastro</button>
                 </form>
             </SectionBody>
         </DivBody>

@@ -16,10 +16,10 @@ const DivHeader = styled.div`
     justify-content: space-around;
     flex-wrap: wrap;
     a{
-        position: absolute;
+        position: relative;
         height: 250px;
-        z-index: 999;   
-        margin-top: -255px;
+        z-index: 1;   
+        margin-top: -250px;
         color: white;
         font-family: Arial, Helvetica, sans-serif;
         font-size: 1.2rem;
@@ -44,15 +44,16 @@ const DivHeader = styled.div`
         overflow: hidden;
         height: 250px;
         img{
-            max-height: 100%;
+            max-width: 100%;
+            height: auto;
         }
     }
     div::after{
         content: '';
         background-color: #e40707;
         opacity: 0.8;
-        width: 100%;
-        height: 100%;
+        width: 300px;
+        height: 250px;
         display: block;
         transform: skewX(-45deg) translateX(-144px);
         margin-top: -255px;
@@ -62,7 +63,6 @@ const DivInfo = styled.div`
     &:nth-child(3){ //essa div
         width: 100%;
         background-color: #e4e4e4;
-        padding: 10px;
         display: flex;
         gap: 20px;
         flex-wrap: wrap;
@@ -70,7 +70,6 @@ const DivInfo = styled.div`
     }
     .infoContent{
         align-self: center;
-        padding: 30px;
         section{
             display: flex;
             justify-content: space-evenly;
@@ -90,6 +89,10 @@ const DivInfo = styled.div`
             font-size: 0.7rem;
             b{
                 font-size: 1.2rem;
+            }
+            @media screen and (max-width:1080px){
+                height: 50px;
+                width: 50px;
             }
         }
         h1,h3{
@@ -114,7 +117,8 @@ const DivInfo = styled.div`
         }
     }
     img{
-       height: 400px;
+        max-width: 90%;
+        height: auto;
     }
 `
 const DivSignNews = styled.div`
@@ -150,10 +154,12 @@ const DivSignNews = styled.div`
         justify-content: center;
         margin-bottom: 20px;
         form{
+            width: 400px;
+            display: flex;
             input{
                 border-radius: 40px 0px 0px 40px;
                 padding: 14px 0px 14px 10px;
-                width: 300px;
+                width: 60%;
                 border: 1px solid grey;
                 color: grey;
             }
@@ -168,12 +174,11 @@ const DivSignNews = styled.div`
                     color: white;
                     padding: 15px;
                     border: none;
-                    width: 150px;
+                    width: 40%;
                     position: relative;
                 }
-                
-            }
         }
+    }
     section{
         display: flex;
         justify-content: center;
@@ -197,9 +202,9 @@ export default function Home(){
             <Header />
                 <DivHolder>
                     <DivHeader>
-                        <div><img src="./src/assets/default.jpg" alt="products" /><a href="#">Notebooks</a></div>
-                        <div><img src="./src/assets/default.jpg" alt="products" /><a href="#">Celulares</a></div>
-                        <div><img src="./src/assets/default.jpg" alt="products" /><a href="#">Acessórios</a></div>
+                        <div><img src="./src/assets/default.jpg" alt="products" width="300" height="300" /><a href="#">Notebooks</a></div>
+                        <div><img src="./src/assets/default.jpg" alt="products" width="300" height="300" /><a href="#">Celulares</a></div>
+                        <div><img src="./src/assets/default.jpg" alt="products" width="300" height="300" /><a href="#">Acessórios</a></div>
                     </DivHeader>
                     <ListProducts titleList="Novos Produtos" />
                 </DivHolder>

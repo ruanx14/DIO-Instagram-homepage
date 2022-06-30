@@ -73,7 +73,7 @@ const DivProduct = styled.article`
     &:hover ${DivAddCart} {
         height: 80px;
     }
-    @media screen and (max-width: 700px){
+    @media screen and (max-width: 900px){
         width: 100%;
     }
 `;
