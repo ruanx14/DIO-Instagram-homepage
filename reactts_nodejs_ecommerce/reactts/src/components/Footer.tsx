@@ -77,14 +77,14 @@ function Footer() {
                 <LinkStyled to="#"> Orders and Returns </LinkStyled>
                 <LinkStyled to="#"> Terms & Conditions</LinkStyled>
             </SectionBody>
-            <SectionBody>
+          {/*   <SectionBody>
                 <h4 style={{color: 'white'}}>SERVICE</h4>
                 <LinkStyled to="#"> Minha Conta </LinkStyled>
                 <LinkStyled to="#"> Ver Carrinho </LinkStyled>
                 <LinkStyled to="#"> Lista de Desejos </LinkStyled> 
                 <LinkStyled to="#"> Rastrear meu pedido </LinkStyled> 
                 <LinkStyled to="#">Ajuda</LinkStyled> 
-            </SectionBody>
+            </SectionBody> */}
         </DivInfo>
 
         <DivLast>

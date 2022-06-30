@@ -171,7 +171,7 @@ const LinkStyled = styled(Link)`
 `;
 
 function Header() {
-    let logged = 'My Account';
+    let logged = 'Login / Cadastre-se';
     const [open, setOpen] = useState(false);
 
     const handleClick = () => {
@@ -222,7 +222,7 @@ function Header() {
                             </InfoLi> 
                         <InfoLi>
                             <User size={20} style={{marginRight: '2px'}} />
-                            <Link to="myAccount" >{logged}</Link>
+                            <Link to="/login" >{logged}</Link>
                         </InfoLi>
                     </InfoUl>
                     </DivInfoBetween>

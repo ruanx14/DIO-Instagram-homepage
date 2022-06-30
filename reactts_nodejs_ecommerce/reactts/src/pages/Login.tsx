@@ -1,6 +1,15 @@
+import Footer from "../components/Footer";
+import Header from "../components/Header";
+
 export default function Login(){
     return (
-        <h1>Login</h1>
+        <>
+        <Header />
+        <div>
+            
+        </div>
+        <Footer />
+        </>
     );
 }
 

@@ -6,8 +6,8 @@ const GlobalStyle = createGlobalStyle`
     padding: 0;
     border-spacing: 0;
     box-sizing: border-box;
-    background-color: rgb(236, 236, 236);
     font-family: Open-Sans, Helvetica, Sans-Serif;
+    -webkit-font-smoothing: antialiased;
   }
   a{
     text-decoration-line: none;
