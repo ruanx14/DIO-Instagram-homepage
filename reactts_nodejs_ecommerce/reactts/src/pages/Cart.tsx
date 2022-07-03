@@ -1,6 +1,14 @@
+import Footer from "../components/Footer";
+import Header from "../components/Header";
+
 export default function Cart(){
+    const cartItem = 4;
     return (
-        <h1>Cart</h1>
+        <>
+            <Header />
+            
+            <Footer />
+        </>
     );
 }
 

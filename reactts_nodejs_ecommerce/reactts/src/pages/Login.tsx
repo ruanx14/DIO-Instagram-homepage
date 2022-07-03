@@ -74,7 +74,7 @@ export default function Login(){
         <DivBody>
             <SectionBody>
                 <h4>Login</h4>
-                <img src="./src/assets/default_logo.png" alt="logo"></img>
+                <Link to="/"><img src="./src/assets/default_logo.png" alt="logo"></img></Link>
                 <form>
                     <input placeholder="Email" />
                     <input type="password" placeholder="Password" />
